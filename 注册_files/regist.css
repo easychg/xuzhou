@@ -1,0 +1,102 @@
+
+.bigLine{width:100%;height:50px;float:left;text-align:left}
+.bigText{
+color: #000;
+font-size: 16px;
+height: 38px;
+line-height: 38px;
+margin: 2px 36px 2px 0px;
+outline: none;
+text-indent: 8px;
+width: 325px;
+border: solid 1px #9FC9EF;
+text-align:center;
+color:#999;
+float:left;
+}
+
+
+.radio1{margin-left:50px;cursor:pointer;color:#083D8F;font-size:14px;width:90px;height:25px;line-height:25px;text-align:left;text-indent:25px;float:left;background:url(/images/index/radio.png) no-repeat 0px 0px}
+.radio2{margin-left:50px;cursor:pointer;color:#083D8F;font-size:14px;width:90px;height:25px;line-height:25px;text-align:left;text-indent:25px;float:left;background:url(/images/index/radio.png) no-repeat 0px -54px}
+.radio1:hover{color:#222}
+.radio2:hover{color:#222}
+
+
+
+#soonSecond{font-weight:bold}
+.soon{font-size:13px;color:#555;position:absolute;left:0px;top:0px;background:#fff;width:300px;height:30px;line-height:30px;text-align:center;
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); 
+opacity:0.9;}
+
+select{height:25px}
+	.tr{float:left;width:760px;overflow:visible;height:40px;font-size:14px;float:left;}
+	.td1{font-size:14px;width:90px;padding-top:8px;float:left;color:#555555;text-align:right;}
+	.td2{width:660px;float:left;text-align:left;overflow:visible;}
+	.tdMSG{font-size:12px;display:none;float:left;width:200px;float:left;position:absolute;left:0px;top:0px;}
+	
+	.text{font-weight:bold;height:26px;line-height:26px;font-size:16px;border:solid 1px #9FC9EF;
+	word-wrap: break-word;word-break: break-all;outline:none;padding-top:1px}
+	.remark{color:#646161;font-size:12px;}
+	.error{font-size:13px;color:#ff0000;display:block;height:15px;line-height:15px;}
+	.none{display:none}
+	.yuan{font-size:22px;color:#ba2636;font-family:Arial;font-weight:bold}
+   
+	
+	.title{margin-top:20px;width:950px;height:50px;line-height:50px;margin-left:auto;margin-right:auto;
+	background:#ffffff;font-size:20px;font-family:黑体;color:#0072CC}
+	
+	
+	.box{position:absolute;width:150px}
+	.blueTop{word-wrap: break-word;word-break: break-all;float:left;width:150px;background:url(/images/p/i.gif) no-repeat 0px 0px}
+	.blueText{color:#000000;margin-left:30px;padding:5px;float:left;font-size:12px;line-height:18px;}
+	.blueBot{float:left;width:150px;height:3px;background:url(/images/p/i.gif) no-repeat 0px -186px}
+	
+	.colorMSG{float:left;width:150px;position:relative}
+	.redTop{word-wrap: break-word;word-break: break-all;float:left;width:150px;background:url(/images/p/i.gif) no-repeat 0px -189px}
+	.redText{color:#000000;margin-left:30px;padding:5px;float:left;font-size:12px;line-height:18px;}
+	.redBot{float:left;width:150px;height:3px;background:url(/images/p/i.gif) no-repeat 0px -377px}
+	
+
+
+A.label{float:left;margin-left:2px;TEXT-DECORATION:none;cursor:pointer}
+.labelLeft{width:10px;height:23px;float:left;background:url(/images/p/label.png) no-repeat 0px -24px}
+.labelText{margin-left:0px;height:23px;line-height:24px;color:#333;font-family:宋体;
+float:left;background:url(/images/p/label.png) repeat-x 0px -48px;font-size:12px;}
+.labelRight{width:10px;height:23px;float:left;background:url(/images/p/label.png) no-repeat 0px 0px}
+
+A.label:hover .labelLeft{background:url(/images/p/label.png) no-repeat 0px -120px}
+A.label:hover .labelText{background:url(/images/p/label.png) repeat-x 0px -72px}
+A.label:hover .labelRight{background:url(/images/p/label.png) no-repeat 0px -96px}
+
+
+
+A.label2{float:left;margin-left:5px;;TEXT-DECORATION:none;cursor:pointer}
+A.label2 .labelRight{width:30px;height:23px;float:left;background:url(/images/p/label2.png) no-repeat 0px 0px}
+
+A.label2:hover .labelLeft{background:url(/images/p/label.png) no-repeat 0px -120px}
+A.label2:hover .labelText{background:url(/images/p/label.png) repeat-x 0px -72px}
+A.label2:hover .labelRight{background:url(/images/p/label2.png) no-repeat 0px -25px}
+
+
+
+
+.none2{filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10); 
+opacity:0.1;}
+tr{float:left;}
+
+.radio1{margin-left:50px;cursor:pointer;color:#083D8F;font-size:14px;height:25px;line-height:25px;text-align:left;text-indent:25px;float:left;background:url(/images/index/radio.png) no-repeat 0px 0px}
+.radio2{margin-left:50px;cursor:pointer;color:#083D8F;font-size:14px;width:90px;height:25px;line-height:25px;text-align:left;text-indent:25px;float:left;background:url(/images/index/radio.png) no-repeat 0px -54px}
+.radio1:hover{color:#222}
+.radio2:hover{color:#222}
+
+.goal_on{float:left;width:140px;height:30px;line-height:30px; TEXT-DECORATION: none;
+font-size:13px;text-align:center;color:#0193E6;
+border:solid 2px #1280CD;background:url(/images/index/regist_news.png) no-repeat 0px -242px}
+
+.goal_off{float:left;width:140px;height:30px;line-height:30px; TEXT-DECORATION: none;
+font-size:13px;text-align:center;color:#0193E6;
+border:solid 2px #d8dfea;}
+.goal_off:hover{border:solid 2px #58BDF6}
+
+
+

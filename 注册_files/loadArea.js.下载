@@ -1,0 +1,128 @@
+ 
+ //初始化省份
+
+var html="";
+var list1=[0,1,14,30];
+for(var i=0;i<list1.length;i++){
+ html+='<a class="a_select" href="javascript:void(0)" onclick=\'LoadCity("'+provinceid[list1[i]]+    '",'   +   '"'+provincename[list1[i]]+  '" )  \'>'+provincename[list1[i]]+'</a>';
+}$("#pList").append(html);
+
+html="";
+list1=[3,20,2,24,18,16,13,8,11,10,25,19,5,9,6,28,27,15,12,23,17,26,21,4,22,7,29];
+for(var i=0;i<list1.length;i++){
+ html+='<a  class="a_select"  href="javascript:void(0)" onclick=\'LoadCity("'+provinceid[list1[i]]+    '",'   +   '"'+provincename[list1[i]]+  '" )  \'>'+provincename[list1[i]]+'</a>';
+}$("#pList").append(html);
+
+html="";
+list1=[31,33,32,34];
+for(var i=0;i<list1.length;i++){
+ html+='<a  class="a_select"  href="javascript:void(0)" onclick=\'LoadCity("'+provinceid[list1[i]]+    '",'   +   '"'+provincename[list1[i]]+  '" )  \'>'+provincename[list1[i]]+'</a>';
+}$("#pList").append(html);
+
+  //初始化省份
+ 
+ function closeList(s){
+	 
+	 var p=$(s).parent();
+	 $(p).hide();
+ }
+ 
+ function selectP(){
+	 
+	
+	 curList="pList";
+	 $("#pList").show();
+	 
+	 $("#cList").hide();
+	 $("#aList").hide();
+	 
+	 $("#aSelect").hide();
+ }
+ 
+
+   
+   function LoadCity(id,name){
+  
+	   $("#cList").find(".a_select").remove();
+	   
+	   $("#pList").hide();
+	   $("#cList").show();
+	   
+	   $("#aList").hide();
+  
+	   $("#pSelect").html(name);
+   
+    $("#province_id").attr("value",Number(id));
+    $("#province").attr("value",name);
+    $("#city_id").attr("value","");
+  
+   $("#city").attr("value","");
+  
+   
+   $("#cSelect").html("请选择");
+ 
+  
+   
+   
+    
+ $.getScript("/js/area/"+id+".js",function(){
+ var html="";
+ for(var i=start;i<=end;i++){  
+  html+='<div class="divSelect"><a  class="a_select" href="javascript:void(0)" onclick=\'LoadArea("'+cityid[i]+    '",'   +   '"'+cityname[i]+  '" )  \'>'+cityname[i]+'</a></div>';
+ } 
+$("#cList").append(html);
+
+});
+   }
+   
+   function LoadArea(s,name){
+	 
+	   $("#aList").find(".a_select").remove();
+	   $("#cSelect").html(name);
+	   
+	   $("#cList").hide();
+	   
+	 
+	   $("#city_id").attr("value",Number(s));
+	   $("#city").attr("value",name);
+	   
+
+   
+Check_Address();
+   }
+   
+   function showText(id,text){
+   var length=text.length;
+   var width=100;
+   if(length>5){width=100+Number((length-5)*10);};
+    $("#"+id).css("width",width);
+    $("#"+id).html(text);
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
