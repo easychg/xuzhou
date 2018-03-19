@@ -2,41 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <style type="text/css">
-        .aNum
-        {
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            border: 1px solid #d2d2d2;
-            line-height: 25px;
-            text-decoration: none;
-            text-align: center;
-        }
-        .aFirst, .aLast
-        {
-            width: 40px;
-        }
-        .aPrev, .aNext
-        {
-            width: 50px;
-        }
-        .current
-        {
-            color: #d2d2d2;
-        }
-        img
-        {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+    <style type="text/css"src="https://easychg.github.io/CssRepository/all.css"></style>
 </head>
 <body>
     <div id="div">
     </div>
     <div id="pages">
-        <a href="localhost:6624/gitdemo.htm?page=45" target="_blank" class="aNum">45</a>
     </div>
 </body>
 <script type="text/javascript" src="https://easychg.github.io/DataBaseRepository/db_chat/t_chat.js"></script>
@@ -45,16 +16,13 @@
     var page = GetQueryString("page") || 1;
     var prePage = page - 1 > 0 ? page - 1 : 1;
     var nextPage = parseInt(page) + 1 > total ? total : parseInt(page) + 1;
-
     var count = 10;
     var totalPage = Math.ceil(total / count);
     var from = (page - 1) * 10;
     var to = page * count;
-
     var div = document.getElementById("div");
     var pages = document.getElementById("pages");
     var path = GetRequest();
-
     for (var i = from; i < to; i++) {
         var href = "https://easychg.github.io/ImagesRepository/" + data[i].image;
         var img = document.createElement('img');
@@ -103,19 +71,7 @@
     function GetRequest() {
         var url = "";
         var _url = location.search; //获取url中含"?"符后的字串
-        //console.log("url：" + url);
-        //        console.log("window.location.pathname：" + window.location.pathname);
-        console.log("window.location.href：" + window.location.href);
-        //        var _href = window.location.href;
-        //        if (_href.indexOf("?") != -1) {
-        //            url = _href.split("?")[0];
-        //        } else {
-        //            url = window.location.href;
-        //        }
-        //        console.log("window.location.port：" + window.location.port);
-        //        console.log("window.location.protocol：" + window.location.protocol);
-        //        console.log("window.location.hash：" + window.location.hash);
-        //url+=window.location.host+window.location.pathname+"?";
+
         url += window.location.pathname + "?";
         if (_url.indexOf("?") != -1) {
             var str = _url.substr(1);
@@ -148,6 +104,19 @@
     //        console.log(date.getMinutes()+":"+date.getSeconds()+","+date.getMilliseconds());
     //    }
     //    var date2 = new Date();
-    //    console.log(date2.getMinutes() + ":" + date2.getSeconds() + "," + date2.getMilliseconds()); 
+    //    console.log(date2.getMinutes() + ":" + date2.getSeconds() + "," + date2.getMilliseconds());
+    //console.log("url：" + url);
+    //        console.log("window.location.pathname：" + window.location.pathname);
+    //console.log("window.location.href：" + window.location.href);
+    //        var _href = window.location.href;
+    //        if (_href.indexOf("?") != -1) {
+    //            url = _href.split("?")[0];
+    //        } else {
+    //            url = window.location.href;
+    //        }
+    //        console.log("window.location.port：" + window.location.port);
+    //        console.log("window.location.protocol：" + window.location.protocol);
+    //        console.log("window.location.hash：" + window.location.hash);
+    //url+=window.location.host+window.location.pathname+"?";
 </script>
 </html>
