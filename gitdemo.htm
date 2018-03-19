@@ -5,56 +5,55 @@
     <style type="text/css">
         .aNum
         {
-           display:inline-block;
-           width:25px;
-           height:25px;
-           border:1px solid #d2d2d2;
-           line-height:25px;
-           text-decoration:none;
-           text-align:center;
-            }
-            .aFirst,.aLast
-            {
-                width:40px;
-                }
-                .aPrev,.aNext
-            {
-                width:50px;
-                }
-                .current
-                {
-                    color:#d2d2d2;
-                    }
-                    img
-                    {
-                        width:100px;
-                        height:100px;
-                        }
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #d2d2d2;
+            line-height: 25px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .aFirst, .aLast
+        {
+            width: 40px;
+        }
+        .aPrev, .aNext
+        {
+            width: 50px;
+        }
+        .current
+        {
+            color: #d2d2d2;
+        }
+        img
+        {
+            width: 100px;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
-<div id="div">
-    
-</div>
-<div id="pages">
-<a href="localhost:6624/gitdemo.htm?page=45" target="_blank" class="aNum">45</a>
-</div>
+    <div id="div">
+    </div>
+    <div id="pages">
+        <a href="localhost:6624/gitdemo.htm?page=45" target="_blank" class="aNum">45</a>
+    </div>
 </body>
 <script type="text/javascript" src="https://easychg.github.io/DataBaseRepository/db_chat/t_chat.js"></script>
 <script type="text/javascript">
     var total = data.length;
-    var page = GetQueryString("page")||1;
+    var page = GetQueryString("page") || 1;
     var prePage = page - 1 > 0 ? page - 1 : 1;
     var nextPage = parseInt(page) + 1 > total ? total : parseInt(page) + 1;
-    
+
     var count = 10;
-    var totalPage=Math.ceil(total/count);
+    var totalPage = Math.ceil(total / count);
     var from = (page - 1) * 10;
     var to = page * count;
-    
+
     var div = document.getElementById("div");
     var pages = document.getElementById("pages");
-    var path=GetRequest();
+    var path = GetRequest();
 
     for (var i = from; i < to; i++) {
         var href = "https://easychg.github.io/ImagesRepository/" + data[i].image;
@@ -64,14 +63,14 @@
         var date = new Date();
         console.log(date.getMinutes() + ":" + date.getSeconds() + "," + date.getMilliseconds());
     }
-    
+
     var aFirst = document.createElement('a');
-    aFirst.href = path + encodeURI(1);
+    aFirst.href = path + encodeURI("首页");
     aFirst.innerText = "首页";
     aFirst.setAttribute("class", "aFirst");
     pages.appendChild(aFirst);
     var aPrev = document.createElement('a');
-    aPrev.href = path + encodeURI(prePage);
+    aPrev.href = path + encodeURI("prePage");
     aPrev.innerText = "上一页";
     aPrev.setAttribute("class", "aPrev");
     pages.appendChild(aPrev);
@@ -102,20 +101,20 @@
         if (r != null) return unescape(r[2]); return null;
     }
     function GetRequest() {
-        var url="";
+        var url = "";
         var _url = location.search; //获取url中含"?"符后的字串
         //console.log("url：" + url);
-//        console.log("window.location.pathname：" + window.location.pathname);
+        //        console.log("window.location.pathname：" + window.location.pathname);
         console.log("window.location.href：" + window.location.href);
-//        var _href = window.location.href;
-//        if (_href.indexOf("?") != -1) {
-//            url = _href.split("?")[0];
-//        } else {
-//            url = window.location.href;
-//        }
-//        console.log("window.location.port：" + window.location.port);
-//        console.log("window.location.protocol：" + window.location.protocol);
-//        console.log("window.location.hash：" + window.location.hash);
+        //        var _href = window.location.href;
+        //        if (_href.indexOf("?") != -1) {
+        //            url = _href.split("?")[0];
+        //        } else {
+        //            url = window.location.href;
+        //        }
+        //        console.log("window.location.port：" + window.location.port);
+        //        console.log("window.location.protocol：" + window.location.protocol);
+        //        console.log("window.location.hash：" + window.location.hash);
         //url+=window.location.host+window.location.pathname+"?";
         url += window.location.pathname + "?";
         if (_url.indexOf("?") != -1) {
@@ -124,31 +123,31 @@
             console.log("str：" + str);
             strs = str.split("&");
             for (var i = 0; i < strs.length; i++) {
-                if(strs[i].split("=")[0]!="page"){
-                    url+=strs+"&";
+                if (strs[i].split("=")[0] != "page") {
+                    url += strs + "&";
                 }
             }
         }
-        url+="page=";
+        url += "page=";
         return url;
     }
 </script>
 <script type="text/javascript">
-//    var div = document.getElementById("div");
-//    var date1 = new Date();
-//    console.log(date1.getMinutes() + ":" + date1.getSeconds() + "," + date1.getMilliseconds()); 
-//    for (var i in data) {
-//        var href = "https://easychg.github.io/ImagesRepository/" + data[i].image;
-//        //var href = "https://easychg.github.io/ImagesRepository/images/loading.gif";
-//        var img = document.createElement('img');
-//        img.src = href;
-//        //img.onerror = "123"; // 'this.src="https://easychg.github.io/ImagesRepository/images/loading.gif"';
-//        img.setAttribute('onerror', "this.src='https://easychg.github.io/ImagesRepository/images/loading.gif'");
-//        div.appendChild(img);
-//        var date = new Date();
-//        console.log(date.getMinutes()+":"+date.getSeconds()+","+date.getMilliseconds());
-//    }
-//    var date2 = new Date();
-//    console.log(date2.getMinutes() + ":" + date2.getSeconds() + "," + date2.getMilliseconds()); 
+    //    var div = document.getElementById("div");
+    //    var date1 = new Date();
+    //    console.log(date1.getMinutes() + ":" + date1.getSeconds() + "," + date1.getMilliseconds()); 
+    //    for (var i in data) {
+    //        var href = "https://easychg.github.io/ImagesRepository/" + data[i].image;
+    //        //var href = "https://easychg.github.io/ImagesRepository/images/loading.gif";
+    //        var img = document.createElement('img');
+    //        img.src = href;
+    //        //img.onerror = "123"; // 'this.src="https://easychg.github.io/ImagesRepository/images/loading.gif"';
+    //        img.setAttribute('onerror', "this.src='https://easychg.github.io/ImagesRepository/images/loading.gif'");
+    //        div.appendChild(img);
+    //        var date = new Date();
+    //        console.log(date.getMinutes()+":"+date.getSeconds()+","+date.getMilliseconds());
+    //    }
+    //    var date2 = new Date();
+    //    console.log(date2.getMinutes() + ":" + date2.getSeconds() + "," + date2.getMilliseconds()); 
 </script>
 </html>
