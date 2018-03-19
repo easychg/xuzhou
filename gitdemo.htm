@@ -102,10 +102,16 @@
         //console.log("url：" + url);
 //        console.log("window.location.pathname：" + window.location.pathname);
         console.log("window.location.href：" + window.location.href);
+        var _href = window.location.href;
+        if (_href.indexOf("?") != -1) {
+            url = _href.split("?")[0];
+        } else {
+            url = window.location.href;
+        }
 //        console.log("window.location.port：" + window.location.port);
 //        console.log("window.location.protocol：" + window.location.protocol);
 //        console.log("window.location.hash：" + window.location.hash);
-        url+=window.location.host+window.location.pathname+"?";
+        //url+=window.location.host+window.location.pathname+"?";
         if (_url.indexOf("?") != -1) {
             var str = _url.substr(1);
             console.log("substr0：" + _url.substr(0));
