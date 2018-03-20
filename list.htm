@@ -44,7 +44,7 @@
     var count = 15;
     var totalPage = Math.ceil(total / count);
     var from = (page - 1) * count;
-    var to = page * count;
+    var to = page * count>total?total:page*count;
     console.log("from：" + from); console.log("to：" + to);
     var div = document.getElementById("div");
     var pages = document.getElementById("pages");

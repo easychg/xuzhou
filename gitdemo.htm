@@ -47,7 +47,7 @@ img
     var count = 10;
     var totalPage = Math.ceil(total / count);
     var from = (page - 1) * count;
-    var to = page * count;
+    var to = page * count > total ? total : page * count;
     var div = document.getElementById("div");
     var pages = document.getElementById("pages");
     var path = GetRequest();
