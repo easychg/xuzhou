@@ -46,7 +46,7 @@ img
     var nextPage = parseInt(page) + 1 > total ? total : parseInt(page) + 1;
     var count = 10;
     var totalPage = Math.ceil(total / count);
-    var from = (page - 1) * 10;
+    var from = (page - 1) * count;
     var to = page * count;
     var div = document.getElementById("div");
     var pages = document.getElementById("pages");
