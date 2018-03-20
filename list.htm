@@ -53,7 +53,11 @@
     for (var i = from; i < to; i++) {
         //var href = "https://easychg.github.io/ImagesRepository/" + data[i].title;
         var li = document.createElement('li');
-        li.innerText = data[i].title;
+        var a = document.createElement('a');
+        a.href = data[i].url;
+        a.innerText = data[i].title;
+        //li.innerText = data[i].title;
+        li.appendChild(a);
         ul.appendChild(li);
         console.log("i：" + i);
     }
