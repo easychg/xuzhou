@@ -1,0 +1,466 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人网站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="css/base.css" rel="stylesheet">
+<link href="css/view.css" rel="stylesheet">
+<link href="css/media.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/myfocus-2.0.4.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+
+<!-- 返回顶部调用 begin -->
+<script type="text/javascript" src="js/up/jquery.js"></script>
+<script type="text/javascript" src="js/up/js.js"></script>
+<!-- 返回顶部调用 end-->
+
+</head>
+<body>
+<header id="header">
+  <!--header-->
+</header>
+<article>
+  <div class="l_box f_l">
+    <div class="topnews">
+      <h2>您现在的位置是：<a href="/">首页</a>><a href="/">新闻频道</a>> 查看内容</h2>
+      <div class="news_title" id="title">FastReport.Net 常用功能总汇4</div>
+      <div class="news_author"><span class="au01">admin</span><span class="au02">2015-1-10</span><span class="au03">共<b>118</b>人围观</span><strong class="au04 f_r">暂无评论</strong></div>
+      <div class="tags"><a href="/" target="_blank">手机</a> <a href="/" target="_blank">电话</a> <a href="/" target="_blank">欠费</a></div>
+
+      <div class="news_about"><strong>简介</strong> :公共物资：我们涉及露营的深度西藏自驾线路（川藏16天、阿里小北17天），随车会配置炉头、气罐、炊具等野炊装备、常规外伤药、高原急救药品、氧气瓶，构成公共物资。</div>
+      <div class="news_content">
+        <ul>
+          <h2 style="margin: 10px 0px; padding: 0px; font-size: 21px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    特殊功能汇总
+</h2>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<h3 style="margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    一<span style="margin: 0px; padding: 0px; font-family: Calibri;">.打印中实现空表格填满剩余的空行，达到指定的行数。</span>
+</h3>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<h4 style="margin: 10px 0px; padding: 0px; font-size: 14px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    1.<span style="margin: 0px; padding: 0px; font-family: 宋体;">单页显示指定行数</span>
+</h4>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    为了能让数据在未填满的前提下，该页也能显示指定的行数N，需要在数据区(data)添加子报表(child)，且需要设置其属性最少数据行(CompleteToNRows)为N。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    <img src="https://images2015.cnblogs.com/blog/887164/201603/887164-20160309180633960-727419124.png" alt=""/>
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    <span style="margin: 0px; padding: 0px; font-family: 宋体;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+</p>
+<h4 style="margin: 10px 0px; padding: 0px; font-size: 14px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    2.按照数据行数显示指定行数
+</h4>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    按照1的设置，预览的时候会发现该操作只会控制首页满足条件，当数据的行数超过一页时，后面页均按照有多少数据显示多少行，此时需要写代码控制。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    如：
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    private&nbsp;void&nbsp;PageHeader1_AfterPrint(object&nbsp;sender,&nbsp;EventArgs&nbsp;e)
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(Engine.FinalPass)
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child1.CompleteToNRows&nbsp;=&nbsp;((Int32)Report.GetVariableValue(&quot;TotalPages&quot;))&nbsp;*&nbsp;20;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}//按照总页数*20来控制CompleteToNRows。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    }
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    此时报表拦中的child区CompleteToNRows设置为1，如图：
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    <img src="https://images2015.cnblogs.com/blog/887164/201603/887164-20160309180654116-1167083695.png" alt=""/>
+</p>
+<h3 style="margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    二<span style="margin: 0px; padding: 0px; font-family: Calibri;">.<span style="margin: 0px; padding: 0px; font-family: 宋体;">本页合计和本期合计</span></span>
+</h3>
+<h4 style="margin: 10px 0px; padding: 0px; font-size: 14px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    1.<span style="margin: 0px; padding: 0px; font-family: 宋体;">本页合计</span>
+</h4>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    在每页均会显示，且统计当前页相关数据的和。此时勾选“打印后重置”项，再将合计项移到相应的位置即可。如图：
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;<img src="https://images2015.cnblogs.com/blog/887164/201603/887164-20160309180723819-579228540.png" alt=""/>
+</p>
+<h4 style="margin: 10px 0px; padding: 0px; font-size: 14px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    2.<span style="margin: 0px; padding: 0px; font-family: 宋体;">本期小计</span>
+</h4>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    在每页均会显示，但是指在数据的最后一页显示合计的数据，统计当前报表的所有数据和；需要写total来计算当前值，只是本期小计中打印后重置这个属性不勾选，由于本期小计只在最后一页显示数据，其他页面上数据区均为空，需要代码控制，例如：
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    private&nbsp;void&nbsp;ColumnFooter1_BeforePrint(object&nbsp;sender,&nbsp;EventArgs&nbsp;e)
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;&nbsp;&nbsp;&nbsp;{
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(((Int32)Report.GetVariableValue(&quot;Page&quot;))!= ((Int32)Report.GetVariableValue(&quot;TotalPages&quot;)))//设置显示本期小计需要的条件，即当前页与总页数相 一致的时候，开始显示数据，否则为空。
+</p>
+<h3 style="margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    三<span style="margin: 0px; padding: 0px; font-family: Calibri;">.<span style="margin: 0px; padding: 0px; font-family: 宋体;">交叉表的用法&nbsp;（演示）</span></span>
+</h3>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    参照模板&nbsp;&nbsp;&nbsp;&nbsp;收费员结账汇总报表<span style="margin: 0px; padding: 0px; font-family: Calibri;">.frx</span>
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    注意交叉表的行列宽度不需设置，自动按照数据长短进行设置。
+</p>
+<h3 style="margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    四<span style="margin: 0px; padding: 0px; font-family: Calibri;">.<span style="margin: 0px; padding: 0px; font-family: 宋体;">套打模板（演示）</span></span>
+</h3>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    参照模板&nbsp;&nbsp;&nbsp;门诊挂号发票（套打）<span style="margin: 0px; padding: 0px; font-family: Calibri;">.frx<span style="margin: 0px; padding: 0px; font-family: 宋体;">，处方笺（综合）<span style="margin: 0px; padding: 0px; font-family: Calibri;">.frx</span></span></span>
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    挂号发票的模板
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    注意，在周浦项目中，由于处方笺模板不一样，在医生工作站会根据选择调用不同的模板，此时是将几种不同的模板组合在一块，再根据标志调用相应的模板。
+</p>
+<h3 style="margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    五<span style="margin: 0px; padding: 0px; font-family: Calibri;">.<span style="margin: 0px; padding: 0px; font-family: 宋体;">超链接模板（演示）</span></span>
+</h3>
+<h2 style="margin: 10px 0px; padding: 0px; font-size: 21px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    报表<span style="margin: 0px; padding: 0px; font-family: Cambria;">&amp;<span style="margin: 0px; padding: 0px; font-family: 宋体;">单据导入</span></span>
+</h2>
+<h3 style="margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    一.&nbsp;单据导入
+</h3>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    单据即由开发直接传入数据源，在模块中实现单据的绘制。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    步骤：找到相对应的模块，点击打印，进入空白模板，再进行设计。对于已经绘制好的模板，可以直接导入，但注意，必须在本地把数据源清空，再导入，否则将会出现<span style="margin: 0px; padding: 0px; font-family: Calibri;">data<span style="margin: 0px; padding: 0px; font-family: 宋体;">区重复，导致命名出现异样，如<span style="margin: 0px; padding: 0px; font-family: Calibri;">data11<span style="margin: 0px; padding: 0px; font-family: 宋体;">。</span></span></span></span>
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    有些模板即使清空数据源导入到模板，仍然会报错，则需要重新新建一个模板，再将原模板的东西复制进去即可。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    相关联的表有：select&nbsp;*&nbsp;from&nbsp;Common.ReportTemplate
+</p>
+<h3 style="margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; white-space: normal;">
+    二<span style="margin: 0px; padding: 0px; font-family: Calibri;">.<span style="margin: 0px; padding: 0px; font-family: 宋体;">报表导入</span></span>
+</h3>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    报表即由存储过程实现，然后再对应到相应的存储过程，去存储过程中的数据。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    步骤：报表管理à新建报表à填写相应的信息后保存（演示）à绘制模板
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    注意：填写信息时要绑定正确的存储过程，同时通过前台改变相应的界面显示效果。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    添加数据源：选择<span style="margin: 0px; padding: 0px; font-family: Calibri;">sql<span style="margin: 0px; padding: 0px; font-family: 宋体;">，再选择相应的存储过程，确定即可，对于新建的模板，模板一栏不需要选择，若选择了则会调用以前存在的模板，同时改动的话也会影响以前的模板。</span></span>
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    <span style="margin: 0px; padding: 0px; font-family: 宋体;"><img src="https://images2015.cnblogs.com/blog/887164/201603/887164-20160309180806538-1966105044.png" alt=""/><img src="https://images2015.cnblogs.com/blog/887164/201603/887164-20160309180812210-1072175025.png" alt=""/></span>
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    相关联的表有：
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    select&nbsp;*&nbsp;from&nbsp;Common.Report&nbsp;
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    select&nbsp;*&nbsp;from&nbsp;Common.ReportDataSource
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    select&nbsp;*&nbsp;from&nbsp;Common.ReportTemplate
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    select&nbsp;*&nbsp;from&nbsp;Common.ReportFolder
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    select&nbsp;*&nbsp;from&nbsp;Common.ReportParameter
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;
+</p>
+<p>
+    <br/>
+</p>
+        </ul>
+      </div>
+      <div class="fenx">分享：</div>
+      <div class="nextinfo">
+        <p>上一篇：<a href="#" id="aprev">没有了...</a></p>
+        <p>下一篇：<a href="#" id="anext">没有了...</a></p>
+      </div>
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+          <li><a href="/" id="a0" title="云南之行——丽江古镇玉龙雪山">云南之行——丽江古镇玉龙雪山</a></li>
+          <li><a href="/" id="a1" title="云南之行——大理洱海一日游">云南之行——大理洱海一日游</a></li>
+          <li><a href="/" id="a2" target="_blank">住在手机里的朋友</a></li>
+          <li><a href="/" id="a3" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li>
+          <li><a href="/" id="a4" target="_blank">教你怎样用欠费手机拨打电话</a></li>
+          <li><a href="/" id="a5" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li>
+        </ul>
+      </div>
+      <div class="news_pl">
+        <h2>文章评论</h2>
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="r_box f_r">
+
+      <div id="myFocus"><!--焦点图盒子-->
+        <div class="loading"></div>
+        <!--载入画面(可删除)-->
+        <div class="pic"><!--图片列表-->
+          <ul  id="lunbo">
+            <!--焦点图-->
+          </ul>
+        </div>
+      </div>
+  
+    <!--banner代码 结束 -->
+      <div class="ms-top">
+        <ul class="hd" id="tab">
+          <li class="cur"><a href="/">点击排行</a></li>
+          <li><a href="/">最新文章</a></li>
+          <li><a href="/">站长推荐</a></li>
+        </ul>
+      </div>
+      <div class="ms-main" id="ms-main">
+        <div style="display: block;" class="bd bd-news" >
+          <ul id="dianji">
+           <!-- 点击-->
+          </ul>
+        </div>
+        <div  class="bd bd-news">
+          <ul id="zuixin">
+            <!--最新-->
+          </ul>
+        </div>
+        <div class="bd bd-news">
+          <ul id="tuijian">
+            <!--推荐-->
+          </ul>
+        </div>
+      </div>
+      <!--ms-main end --> 
+
+    <!--切换卡 moreSelect end -->
+    
+    <div class="cloud">
+      <h3>标签云</h3>
+      <ul id="biaoqian">
+        <!--标签-->
+      </ul>
+    </div>
+    <div class="ad" id="r_ad"><!-- guanggao--> </div>
+
+  </div>
+  <!--r_box end --> 
+</article>
+<footer id="footer">
+  <!--footer-->
+</footer>
+<script type="text/javascript" src="js/t_a.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script src="js/silder.js"></script> 
+<script type="text/javascript">
+    var total = data.length;
+    var arrindex = config.index;
+    var arrdianji = config.dianji;
+    var arrtuijian = config.tuijian;
+    var arrzuixin = config.zuixin;
+    var arrbiaoqian = config.biaoqian;
+    var arrguanggao = config.guanggao;
+    var arrtuwentuijian = config.tuwentuijian;
+    var arryouqinglianjie = config.youqinglianjie;
+    var arrlunbo = config.lunbo;
+    var arrlunbo2 = config.lunbo2;
+    //var div = document.getElementById("div");
+    var tuijian = document.getElementById("tuijian");
+    var zuixin = document.getElementById("zuixin");
+    var dianji = document.getElementById("dianji");
+    var biaoqian = document.getElementById("biaoqian");
+    var lunbo = document.getElementById("lunbo");
+    var guanggao = document.getElementById("r_ad");
+    
+    //var youqinglianjie = document.getElementById("youqinglianjie");
+    
+    for (var i in arrlunbo) {
+        var li = document.createElement("li");
+        var lia = document.createElement("a");
+        var liaimg = document.createElement("img");
+        liaimg.src = arrlunbo[i].img;
+        liaimg.setAttribute("alt", arrlunbo[i].alt);
+        liaimg.setAttribute("text", arrlunbo[i].text);
+        liaimg.setAttribute("thumb", "");
+        lia.href = "#" + i;
+        lia.appendChild(liaimg);
+        li.appendChild(lia);
+        lunbo.appendChild(li);
+    }
+
+    //<li><a href="/" target="_blank">住在手机里的朋友</a></li>
+    for (var i in arrtuijian) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        tuijian.appendChild(li);
+    }
+    for (var i in arrzuixin) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        zuixin.appendChild(li);
+    }
+    for (var i in arrdianji) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        dianji.appendChild(li);
+    }
+    for (var i in arrbiaoqian) {
+        console.log(arrbiaoqian[i]);
+        var a = document.createElement("a"); a.href = "/"; a.innerText = arrbiaoqian[i];
+        biaoqian.appendChild(a);
+    }
+    if (arrguanggao.length > 1) {
+        var guanggaoimg = document.createElement("img");
+        guanggaoimg.src = arrguanggao[1].img;
+        guanggao.appendChild(guanggaoimg);
+    }
+//    for (var i in arryouqinglianjie) {
+//        var li = document.createElement("li");
+//        var lia = document.createElement("a"); lia.href = arryouqinglianjie[i].url; lia.innerText = arryouqinglianjie[i].name;
+//        li.appendChild(lia);
+//        youqinglianjie.appendChild(li);
+//    }
+</script>
+<script type="text/javascript">
+    var _title = $("#title").text();
+    var aprev = document.getElementById("aprev");
+    var anext = document.getElementById("anext");
+    var arr = [];
+    for (var i in data) {
+        if (data[i].title == _title) {
+            if (i > 0) {
+                aprev.innerText = data[parseInt(i) - 1].title;
+                aprev.href = data[parseInt(i) - 1].url;
+            }
+            if (i < total) {
+                anext.innerText = data[parseInt(i) + 1].title;
+                anext.href = data[parseInt(i) - 1].url;
+            }
+        } 
+    }
+    
+        for (var i = 0; i < 6; i++) {
+            var number = Math.floor(Math.random() * (total - 0 + 1) + 0);
+            if (arr.indexOf(number) < 0) {
+                arr.push(number);
+                $("#a" + i).text(data[number].title).attr("href", data[number].url).attr("title", data[number].title);
+            } else {
+                i--;
+            }
+        }
+</script>
+<script type="text/javascript">
+    //设置
+    myFocus.set({
+        id: 'myFocus', //ID
+        pattern: 'mF_kdui'//风格
+    });
+</script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+        jQuery(function () {
+            var elm = jQuery('#r_ad');
+            var startPos = jQuery(elm).offset().top;
+            jQuery.event.add(window, "scroll", function () {
+                var p = jQuery(window).scrollTop();
+                jQuery(elm).css('position', ((p) > startPos) ? 'fixed' : 'static');
+                jQuery(elm).css('top', ((p) > startPos) ? '30px' : '');
+            });
+        }); 
+</script> 
+</body>
+</html>

@@ -1,0 +1,392 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人网站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="css/base.css" rel="stylesheet">
+<link href="css/view.css" rel="stylesheet">
+<link href="css/media.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/myfocus-2.0.4.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+
+<!-- 返回顶部调用 begin -->
+<script type="text/javascript" src="js/up/jquery.js"></script>
+<script type="text/javascript" src="js/up/js.js"></script>
+<!-- 返回顶部调用 end-->
+
+</head>
+<body>
+<header id="header">
+  <!--header-->
+</header>
+<article>
+  <div class="l_box f_l">
+    <div class="topnews">
+      <h2>您现在的位置是：<a href="/">首页</a>><a href="/">新闻频道</a>> 查看内容</h2>
+      <div class="news_title" id="title">FastReport.Net 常用功能总汇3</div>
+      <div class="news_author"><span class="au01">admin</span><span class="au02">2015-1-10</span><span class="au03">共<b>118</b>人围观</span><strong class="au04 f_r">暂无评论</strong></div>
+      <div class="tags"><a href="/" target="_blank">手机</a> <a href="/" target="_blank">电话</a> <a href="/" target="_blank">欠费</a></div>
+
+      <div class="news_about"><strong>简介</strong> :公共物资：我们涉及露营的深度西藏自驾线路（川藏16天、阿里小北17天），随车会配置炉头、气罐、炊具等野炊装备、常规外伤药、高原急救药品、氧气瓶，构成公共物资。</div>
+      <div class="news_content">
+        <ul>
+          <p>
+    四.常用属性
+1.页面设置
+用于显示总的页数（TotalPages），例如：页脚显示 第1页/共20页。系统第一遍扫描报表时计算出TotalPages，然后第二遍实际 生成报表。如果不使用Double pass，则TotalPages返回0，所以必须设置report的属性doublepass为true；
+
+设置方法：点击报表树，单击报表树最顶端图标，点击属性，选择doublepass为true；也可直接在属性框中选择report，进行相关属性设置！如图：
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+2.打印设置
+对于套打模板，样式在纸张上已经固定了（如处方笺、收费发票），只需要按照原定的样张将数据填充进去，在绘制的时候，需要用直尺良好尺寸，为了能够有一个更好的效果，一般把页面上已经存在不需要再打印出来的也画出来，但是需要设置属性“printable”为false：表示打印不显示，若想在预览的时候就不要看到那些不需要打印的，则需设置属性“Visible”为false：表示预览不显示。
+
+3.格式设置
+报表中有的数据需要按照规定的格式去显示，如需要把时间的格式改变一下，选中当前数据，右键单击，点击format（或在属性栏中选择 format），在弹出的选择格式框中选择需要的格式。若format中没有需要的格式，则需要在custom中自定义，比如我需要把时间设置为 2012-09-09 11：22：23，此时可以在custom中填时间显示格式：yyyy-MM-dd HH:mm:ss。注意有的需要显示上午还是 下午，表示上午下午的格式是tt，具体相关设置可以参照已存在的format进行编辑！如图：
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+4.显示设置
+对于有些数据，名称较长，在行高固定的情况下，系统默认为自动换行，此时两者均不能完全显示不能完全显示，比如，此时按照客户的需求，若要求自动截断，则设置“WordWrap”为false（即不自动换行），若要求全部显示，则需要让该数据有按照单元格大小自动缩放功能，设置属性“AutoShrink”为fontsize或者fontwith。
+
+5.边框设置
+边框可以通过工具栏设置，此时设置边框是根据外界框的大小来显示，下边框的设置也可以通过设置下划线，此时下边框的长度是根据数据显示的长度来决定，还可以设置属性“underline”为true，此时也是根据边框的大小来显示的。
+
+6.表格设置
+1)表格的行列数：通过属性设置ColumnCount（列）和RowCount（行）设置。
+
+2)合并/分割单元格：选中需要合并/分割的单元格，右键单击，选择“合并单元格”/“分割单元格”，如图：
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+ 
+
+3)插入行列：选中某行、某列，右键单击，选择需要插入的位置，如图：
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+ 
+
+五.常用代码
+ 
+
+1.在文本编辑器中编写
+ 
+
+Fastreport软件自身带了很多功能实现数据的转换，直接在编辑框中即可实现。
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+ 
+
+常用的功能有： &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;选择语句IFF；控制语句Switch；
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 截取字符串语句SubString，在text列表中选择SubString
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 截取时间语句Date&amp;Time：
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 算数运算语句Mathematical：常用的有Abs（取绝对值）。
+
+ 
+
+注意，在运用这些function的时候，在文本编辑器右下角会显示当前功能的用法规则，如图：
+
+ 
+
+
+
+若当前数据类型不满足规则，则需要利用上面的转换语句，将其转换成与规则相符的数据类型，才能利用这些function，否则会报错。
+
+ 
+
+2.在code区编写
+ 
+
+有些数据的转换在编辑器中不能直接实现，需要在code区域编写代码。写代码之前需要定义到相应的事件上：选中需要写代码的数据所在的报表拦，在属性设置中点击，在事件中双击需要用到的事件，自动跳转到code区，且会出现一行代码，类似于private void GroupHeader1_BeforePrint(object sender, EventArgs e)
+
+ 
+
+ &nbsp; &nbsp;{
+
+ 
+
+ &nbsp; &nbsp;}
+
+ 
+
+报表中常用事件有BeforePrint，AfterPrint。
+
+ 
+
+3.常用代码
+ 
+
+1)Data1.InitDataSource();//数据初始化，用于数据跑两遍
+
+ 
+
+2)有的需要把年月日进行分离显示，此时需要选取时间并选择只显示时间的某部分，比如某个DateTime2类型的参数值为20120919，现需 要将其年月日分开，分别以__年__月__日显示，需要利用fastreport提供的功能进行分离,即1中的方法，但是注意此种方法只能用于数据类型为 datetime的数据；对于非datetime型的数据，可以写代码取位数或者进行强制转换，以string为例：
+
+ 
+
+private void ColumnFooter1_BeforePrint(object sender, EventArgs e)
+
+ 
+
+ &nbsp; &nbsp;{
+
+ 
+
+ &nbsp; &nbsp; &nbsp;string &nbsp;tbrq= &nbsp;((String)Report.GetColumnValue(&quot;Table1.TBRQ&quot;));
+
+ 
+
+ &nbsp; &nbsp; &nbsp;if (!String.IsNullOrEmpty(tbrq))
+
+ 
+
+ &nbsp; &nbsp; &nbsp;{
+
+ 
+
+ &nbsp; &nbsp; &nbsp; &nbsp;Text9.Text = tbrq.Substring(0,4) + &quot;年&quot; + tbrq.Substring(4,2) + &quot;月&quot;+tbrq.Substring(6,2)+&quot;日&quot;;
+
+ 
+
+ &nbsp; &nbsp; &nbsp;}//字符串型用SubString，Substring(0,4)表示从第0位开始，取出四位作为年。
+
+ 
+
+3）小数位的控制：可以用format对所有数据的小数位进行控制，但只对于数值型的数据才有效，但是对于string型的则需要用语句进行实现，如：
+
+ 
+
+decimal sl= ((Decimal)Report.GetColumnValue(&quot;dtfee.Quantity&quot;);
+
+ 
+
+Cell51.Text=sl.ToString(&quot;0.00&quot;);// &quot;0.00&quot;若不填则按照默认值显示，后面多少个零显示出来的数据即为有 多少个小数；对于数量，有时要求要求有小数时则显示小数，无小数时则显示整数，此时只需要将&quot;0.00&quot;改为&quot;0.##&quot;即可，##的个数也是可以自定义 的，表示显示的最多的小数位。
+</p>
+        </ul>
+      </div>
+      <div class="fenx">分享：</div>
+      <div class="nextinfo">
+        <p>上一篇：<a href="#" id="aprev">没有了...</a></p>
+        <p>下一篇：<a href="#" id="anext">没有了...</a></p>
+      </div>
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+          <li><a href="/" id="a0" title="云南之行——丽江古镇玉龙雪山">云南之行——丽江古镇玉龙雪山</a></li>
+          <li><a href="/" id="a1" title="云南之行——大理洱海一日游">云南之行——大理洱海一日游</a></li>
+          <li><a href="/" id="a2" target="_blank">住在手机里的朋友</a></li>
+          <li><a href="/" id="a3" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li>
+          <li><a href="/" id="a4" target="_blank">教你怎样用欠费手机拨打电话</a></li>
+          <li><a href="/" id="a5" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li>
+        </ul>
+      </div>
+      <div class="news_pl">
+        <h2>文章评论</h2>
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="r_box f_r">
+
+      <div id="myFocus"><!--焦点图盒子-->
+        <div class="loading"></div>
+        <!--载入画面(可删除)-->
+        <div class="pic"><!--图片列表-->
+          <ul  id="lunbo">
+            <!--焦点图-->
+          </ul>
+        </div>
+      </div>
+  
+    <!--banner代码 结束 -->
+      <div class="ms-top">
+        <ul class="hd" id="tab">
+          <li class="cur"><a href="/">点击排行</a></li>
+          <li><a href="/">最新文章</a></li>
+          <li><a href="/">站长推荐</a></li>
+        </ul>
+      </div>
+      <div class="ms-main" id="ms-main">
+        <div style="display: block;" class="bd bd-news" >
+          <ul id="dianji">
+           <!-- 点击-->
+          </ul>
+        </div>
+        <div  class="bd bd-news">
+          <ul id="zuixin">
+            <!--最新-->
+          </ul>
+        </div>
+        <div class="bd bd-news">
+          <ul id="tuijian">
+            <!--推荐-->
+          </ul>
+        </div>
+      </div>
+      <!--ms-main end --> 
+
+    <!--切换卡 moreSelect end -->
+    
+    <div class="cloud">
+      <h3>标签云</h3>
+      <ul id="biaoqian">
+        <!--标签-->
+      </ul>
+    </div>
+    <div class="ad" id="r_ad"><!-- guanggao--> </div>
+
+  </div>
+  <!--r_box end --> 
+</article>
+<footer id="footer">
+  <!--footer-->
+</footer>
+<script type="text/javascript" src="js/t_a.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script src="js/silder.js"></script> 
+<script type="text/javascript">
+    var total = data.length;
+    var arrindex = config.index;
+    var arrdianji = config.dianji;
+    var arrtuijian = config.tuijian;
+    var arrzuixin = config.zuixin;
+    var arrbiaoqian = config.biaoqian;
+    var arrguanggao = config.guanggao;
+    var arrtuwentuijian = config.tuwentuijian;
+    var arryouqinglianjie = config.youqinglianjie;
+    var arrlunbo = config.lunbo;
+    var arrlunbo2 = config.lunbo2;
+    //var div = document.getElementById("div");
+    var tuijian = document.getElementById("tuijian");
+    var zuixin = document.getElementById("zuixin");
+    var dianji = document.getElementById("dianji");
+    var biaoqian = document.getElementById("biaoqian");
+    var lunbo = document.getElementById("lunbo");
+    var guanggao = document.getElementById("r_ad");
+    
+    //var youqinglianjie = document.getElementById("youqinglianjie");
+    
+    for (var i in arrlunbo) {
+        var li = document.createElement("li");
+        var lia = document.createElement("a");
+        var liaimg = document.createElement("img");
+        liaimg.src = arrlunbo[i].img;
+        liaimg.setAttribute("alt", arrlunbo[i].alt);
+        liaimg.setAttribute("text", arrlunbo[i].text);
+        liaimg.setAttribute("thumb", "");
+        lia.href = "#" + i;
+        lia.appendChild(liaimg);
+        li.appendChild(lia);
+        lunbo.appendChild(li);
+    }
+
+    //<li><a href="/" target="_blank">住在手机里的朋友</a></li>
+    for (var i in arrtuijian) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        tuijian.appendChild(li);
+    }
+    for (var i in arrzuixin) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        zuixin.appendChild(li);
+    }
+    for (var i in arrdianji) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        dianji.appendChild(li);
+    }
+    for (var i in arrbiaoqian) {
+        console.log(arrbiaoqian[i]);
+        var a = document.createElement("a"); a.href = "/"; a.innerText = arrbiaoqian[i];
+        biaoqian.appendChild(a);
+    }
+    if (arrguanggao.length > 1) {
+        var guanggaoimg = document.createElement("img");
+        guanggaoimg.src = arrguanggao[1].img;
+        guanggao.appendChild(guanggaoimg);
+    }
+//    for (var i in arryouqinglianjie) {
+//        var li = document.createElement("li");
+//        var lia = document.createElement("a"); lia.href = arryouqinglianjie[i].url; lia.innerText = arryouqinglianjie[i].name;
+//        li.appendChild(lia);
+//        youqinglianjie.appendChild(li);
+//    }
+</script>
+<script type="text/javascript">
+    var _title = $("#title").text();
+    var aprev = document.getElementById("aprev");
+    var anext = document.getElementById("anext");
+    var arr = [];
+    for (var i in data) {
+        if (data[i].title == _title) {
+            if (i > 0) {
+                aprev.innerText = data[parseInt(i) - 1].title;
+                aprev.href = data[parseInt(i) - 1].url;
+            }
+            if (i < total) {
+                anext.innerText = data[parseInt(i) + 1].title;
+                anext.href = data[parseInt(i) - 1].url;
+            }
+        } 
+    }
+    
+        for (var i = 0; i < 6; i++) {
+            var number = Math.floor(Math.random() * (total - 0 + 1) + 0);
+            if (arr.indexOf(number) < 0) {
+                arr.push(number);
+                $("#a" + i).text(data[number].title).attr("href", data[number].url).attr("title", data[number].title);
+            } else {
+                i--;
+            }
+        }
+</script>
+<script type="text/javascript">
+    //设置
+    myFocus.set({
+        id: 'myFocus', //ID
+        pattern: 'mF_kdui'//风格
+    });
+</script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+        jQuery(function () {
+            var elm = jQuery('#r_ad');
+            var startPos = jQuery(elm).offset().top;
+            jQuery.event.add(window, "scroll", function () {
+                var p = jQuery(window).scrollTop();
+                jQuery(elm).css('position', ((p) > startPos) ? 'fixed' : 'static');
+                jQuery(elm).css('top', ((p) > startPos) ? '30px' : '');
+            });
+        }); 
+</script> 
+</body>
+</html>
