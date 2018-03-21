@@ -18,63 +18,32 @@
     <!-- 返回顶部调用 end-->
 </head>
 <body>
-    <header>
-  <div class="topbg">
-    <ul class="topnav">
-      <a href="/ " target="_blank">Home</a><a href="/ " target="_blank">官方微博</a><a href="/ " target="_blank">关于我们</a>
-    </ul>
-  </div>
-  <div class="topbgline"></div>
-  <div class="logo">
-    <div class="logo_l f_l"><a href="/"><img src="images/logo.png"></a></div>
-    <div class="logo_r f_r"><a href="/"><img src="images/search.png"></a></div>
-  </div>
-  <nav id="topnav">
-    <ul>
-      <a href="index.html" target="_blank">网站首页</a> <a href="news.html" target="_blank">新闻中心</a> <a href="p.html" target="_blank">产品中心</a> <a href="a.html" target="_blank">关于我们</a> <a href="c.html" target="_blank">联系我们</a> <a href="b.html" target="_blank">网上留言</a>
-    </ul>
-    <script src="js/silder.js"></script> 
-  </nav>
+    <header id="header">
+    <!-- header-->
 </header>
+
     <article>
   <div class="l_box f_l">
     <div class="banner f_l"> 
-<script type="text/javascript">
-    //设置
-    myFocus.set({
-        id: 'myFocus', //ID
-        pattern: 'mF_fancy'//风格
-    });
-</script>
+
       <div id="myFocus"><!--焦点图盒子-->
         <div class="loading"></div>
         <!--载入画面(可删除)-->
         <div class="pic"><!--图片列表-->
-          <ul>
-            <li><a href="#1"><img src="images/1m.jpg" thumb="" alt="酷站代码整理" text="图片1更详细的描述文字" /></a></li>
-            <li><a href="#2"><img src="images/2m.jpg" thumb="" alt="酷站代码特效大全" text="图片2更详细的描述文字" /></a></li>
-            <li><a href="#3"><img src="images/3m.jpg" thumb="" alt="酷站代码特效" text="图片3更详细的描述文字" /></a></li>
-            <li><a href="#4"><img src="images/4m.jpg" thumb="" alt="酷站代码素材" text="图片4更详细的描述文字" /></a></li>
-            <li><a href="#5"><img src="images/5m.jpg" thumb="" alt="酷站代码教程" text="图片5更详细的描述文字" /></a></li>
+          <ul id="lunbo">
+            <!--轮播图-->
           </ul>
         </div>
       </div>
     </div>
     <!--banner代码 结束 -->
     
-    <div class="focustext f_r">
-      <section class="ft01">
-        <h3><a href="/" target="_blank">住在手机里的朋友</a></h3>
-        <p>通信时代，无论是初次相见还是老友重逢，交换联系方式，常常是彼此交换名片</p>
-      </section>
-      <section class="ft02">
-        <h3><a href="/" target="_blank">教你怎样用欠费手机拨...</a></h3>
-        <p>在快节奏的生活里，我们不知不觉中就成为住在别人手机里的朋友。</p>
-      </section>
+    <div class="focustext f_r" id="lunbo2">
+      <!--轮播图2-->
     </div>
     <div class="blank"></div>
     <div class="topnews" id="div">
-      <h2><span><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a></span><b>文章</b>推荐</h2>
+      <h2><b>文章</b>推荐</h2>
       <!--主内容区域 -->
     </div>
   </div>
@@ -123,7 +92,7 @@
       </div>
     </div>
     <!--tit01 end-->
-    <div class="ad300x100" id="ad300x100"></div>
+    <div class="ad300x100" id="ad300x100"><!--广告--></div>
     <div class="moreSelect" id="lp_right_select"> 
       <script>
           window.onload = function () {
@@ -191,28 +160,14 @@
   </div>
   <!--r_box end --> 
 </article>
-    <footer>
-  <div class="endfoot">
-    <div class="ft-info f_l">
-      <div class="ftlogo"><a href="#" target="_blank"><img src="images/ftlogo.png"></a></div>
-      <div class="ft-title">
-        <p>时尚设计，国内最优化的模板设计平台! </p>
-      </div>
-    </div>
-    <div class="ft-list f_r">
-       <div class="ft-shares">    
-         <a class="shares-sina" title="新浪微博" href="#" target="_blank"></a>
-         <a class="shares-ten" title="腾讯微博" href="#" target="_blank"></a>
-         <a class="shares-dib" href="#" target="_blank"></a>
-      </div>
-      <div class="ft-nav"> <a href="#" target="_blank">关于我们</a> <a href="#" target="_blank">联系我们</a> <a href="#" target="_blank">版权声明</a> <a href="#" id="qaurl">问题反馈</a> <a href="#" target="_blank">商务合作</a> </div>
-      <p class="ft-copyright"> Copyright 2014 Comsenz Inc. Powered by Discuz! X3.2. 粤ICP2014008000-3号</p>
-    </div>
-  </div>
-  <div id="tbox"> <a id="togbook" href="/"></a> <a id="gotop" href="javascript:void(0)"></a> </div>
+    <footer id="footer">
+  <!--footer --> 
 </footer>
 <script type="text/javascript" src="https://easychg.github.io/DataBaseRepository/db_a/t_a.js"></script>
 <script type="text/javascript" src="https://easychg.github.io/DataBaseRepository/db_a/config.js"></script>
+<script type="text/javascript" src="https://easychg.github.io/DataBaseRepository/db_a/footer.js"></script>
+<script type="text/javascript" src="https://easychg.github.io/DataBaseRepository/db_a/header.js"></script>
+<script src="js/silder.js"></script> 
 <script type="text/javascript">
     var total = data.length;
     var arrindex = config.index;
@@ -223,6 +178,8 @@
     var arrguanggao = config.guanggao;
     var arrtuwentuijian = config.tuwentuijian;
     var arryouqinglianjie = config.youqinglianjie;
+    var arrlunbo = config.lunbo;
+    var arrlunbo2 = config.lunbo2;
     var div = document.getElementById("div");
     var tuijian = document.getElementById("tuijian");
     var zuixin = document.getElementById("zuixin");
@@ -232,6 +189,8 @@
     var guanggao = document.getElementById("guanggao");
     var ad300x100 = document.getElementById("ad300x100");
     var youqinglianjie = document.getElementById("youqinglianjie");
+    var lunbo = document.getElementById("lunbo");
+    var lunbo2 = document.getElementById("lunbo2");
     for (var i in arrindex) {
         if (arrindex[i] > data.length) continue;
         var blogs = document.createElement("div"); blogs.setAttribute("class", "blogs");
@@ -261,6 +220,34 @@
         blogsul.appendChild(blogsulp2);
         blogs.appendChild(blogsul);
         div.appendChild(blogs);
+    }
+    //<li><a href="#1"><img src="images/1m.jpg" thumb="" alt="酷站代码整理" text="图片1更详细的描述文字" /></a></li>
+    for (var i in arrlunbo) {
+        var li = document.createElement("li");
+        var lia = document.createElement("a");
+        var liaimg = document.createElement("img");
+        liaimg.src = arrlunbo[i].img;
+        liaimg.setAttribute("alt", arrlunbo[i].alt);
+        liaimg.setAttribute("text", arrlunbo[i].text);
+        liaimg.setAttribute("thumb", "");
+        lia.href = "#" + i;
+        lia.appendChild(liaimg);
+        li.appendChild(lia);
+        lunbo.appendChild(li);
+    }
+//    <section class="ft01">
+//        <h3><a href="/" target="_blank">住在手机里的朋友</a></h3>
+//        <p>通信时代，无论是初次相见还是老友重逢，交换联系方式，常常是彼此交换名片</p>
+//      </section>
+    for (var i in arrlunbo2) {
+        var section = document.createElement("section");section.setAttribute("class", "ft0" + (parseInt(i)+1));
+        var sectionh3 = document.createElement("h3");
+        var sectionh3a = document.createElement("a"); sectionh3a.href = data[arrindex[i]].url; sectionh3a.setAttribute("target", "_blank"); sectionh3a.innerText = data[arrlunbo2[i]].title.substring(0, 8)+"...";
+        var sectionp = document.createElement("p"); sectionp.innerText = data[arrlunbo2[i]].descr.substring(0,35)+"...";
+        sectionh3.appendChild(sectionh3a);
+        section.appendChild(sectionh3);
+        section.appendChild(sectionp);
+        lunbo2.appendChild(section);
     }
     //<li><a href="/" target="_blank">住在手机里的朋友</a></li>
     for (var i in arrtuijian) {
@@ -405,6 +392,13 @@
 //        url += "page=";
 //        return url;
 //    }
+</script>
+<script type="text/javascript">
+    //设置
+    myFocus.set({
+        id: 'myFocus', //ID
+        pattern: 'mF_fancy'//风格
+    });
 </script>
 </body>
 </html>
