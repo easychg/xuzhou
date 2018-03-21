@@ -1,0 +1,265 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人网站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="css/base.css" rel="stylesheet">
+<link href="css/view.css" rel="stylesheet">
+<link href="css/media.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/myfocus-2.0.4.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+
+<!-- 返回顶部调用 begin -->
+<script type="text/javascript" src="js/up/jquery.js"></script>
+<script type="text/javascript" src="js/up/js.js"></script>
+<!-- 返回顶部调用 end-->
+
+</head>
+<body>
+<header id="header">
+  <!--header-->
+</header>
+<article>
+  <div class="l_box f_l">
+    <div class="topnews">
+      <h2>您现在的位置是：<a href="/">首页</a>><a href="/">新闻频道</a>> 查看内容</h2>
+      <div class="news_title" id="title">SQL Server CONVERT() 截取日期</div>
+      <div class="news_author"><span class="au01">admin</span><span class="au02">2015-1-10</span><span class="au03">共<b>118</b>人围观</span><strong class="au04 f_r">暂无评论</strong></div>
+      <div class="tags"><a href="/" target="_blank">手机</a> <a href="/" target="_blank">电话</a> <a href="/" target="_blank">欠费</a></div>
+
+      <div class="news_about"><strong>简介</strong> :公共物资：我们涉及露营的深度西藏自驾线路（川藏16天、阿里小北17天），随车会配置炉头、气罐、炊具等野炊装备、常规外伤药、高原急救药品、氧气瓶，构成公共物资。</div>
+      <div class="news_content">
+        <ul>
+         <p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    SELECT CONVERT(varchar(100), GETDATE(), 0): 05 16 2006 10:57AM<br/>SELECT CONVERT(varchar(100), GETDATE(), 1): 05/16/06<br/>SELECT CONVERT(varchar(100), GETDATE(), 2): 06.05.16<br/>SELECT CONVERT(varchar(100), GETDATE(), 3): 16/05/06<br/>SELECT CONVERT(varchar(100), GETDATE(), 4): 16.05.06<br/>SELECT CONVERT(varchar(100), GETDATE(), 5): 16-05-06<br/>SELECT CONVERT(varchar(100), GETDATE(), 6): 16 05 06<br/>SELECT CONVERT(varchar(100), GETDATE(), 7): 05 16, 06<br/>SELECT CONVERT(varchar(100), GETDATE(), 8): 10:57:46<br/>SELECT CONVERT(varchar(100), GETDATE(), 9): 05 16 2006 10:57:46:827AM<br/>SELECT CONVERT(varchar(100), GETDATE(), 10): 05-16-06<br/>SELECT CONVERT(varchar(100), GETDATE(), 11): 06/05/16<br/>SELECT CONVERT(varchar(100), GETDATE(), 12): 060516<br/>SELECT CONVERT(varchar(100), GETDATE(), 13): 16 05 2006 10:57:46:937<br/>SELECT CONVERT(varchar(100), GETDATE(), 14): 10:57:46:967<br/>SELECT CONVERT(varchar(100), GETDATE(), 20): 2006-05-16 10:57:47<br/>SELECT CONVERT(varchar(100), GETDATE(), 21): 2006-05-16 10:57:47.157<br/>SELECT CONVERT(varchar(100), GETDATE(), 22): 05/16/06 10:57:47 AM<br/>SELECT CONVERT(varchar(100), GETDATE(), 23): 2006-05-16<br/>SELECT CONVERT(varchar(100), GETDATE(), 24): 10:57:47<br/>SELECT CONVERT(varchar(100), GETDATE(), 25): 2006-05-16 10:57:47.250<br/>SELECT CONVERT(varchar(100), GETDATE(), 100): 05 16 2006 10:57AM<br/>SELECT CONVERT(varchar(100), GETDATE(), 101): 05/16/2006<br/>SELECT CONVERT(varchar(100), GETDATE(), 102): 2006.05.16<br/>SELECT CONVERT(varchar(100), GETDATE(), 103): 16/05/2006<br/>SELECT CONVERT(varchar(100), GETDATE(), 104): 16.05.2006<br/>SELECT CONVERT(varchar(100), GETDATE(), 105): 16-05-2006<br/>SELECT CONVERT(varchar(100), GETDATE(), 106): 16 05 2006<br/>SELECT CONVERT(varchar(100), GETDATE(), 107): 05 16, 2006<br/>SELECT CONVERT(varchar(100), GETDATE(), 108): 10:57:49<br/>SELECT CONVERT(varchar(100), GETDATE(), 109): 05 16 2006 10:57:49:437AM<br/>SELECT CONVERT(varchar(100), GETDATE(), 110): 05-16-2006<br/>SELECT CONVERT(varchar(100), GETDATE(), 111): 2006/05/16<br/>SELECT CONVERT(varchar(100), GETDATE(), 112): 20060516<br/>SELECT CONVERT(varchar(100), GETDATE(), 113): 16 05 2006 10:57:49:513<br/>SELECT CONVERT(varchar(100), GETDATE(), 114): 10:57:49:547<br/>SELECT CONVERT(varchar(100), GETDATE(), 120): 2006-05-16 10:57:49<br/>SELECT CONVERT(varchar(100), GETDATE(), 121): 2006-05-16 10:57:49.700<br/>SELECT CONVERT(varchar(100), GETDATE(), 126): 2006-05-16T10:57:49.827<br/>SELECT CONVERT(varchar(100), GETDATE(), 130): 18 ???? ?????? 1427 10:57:49:907AM<br/>SELECT CONVERT(varchar(100), GETDATE(), 131): 18/04/1427 10:57:49:920AM<br/>说明:<br/>使用 CONVERT：<br/>CONVERT ( data_type [ ( length ) ] , expression [ , style ] )<br/>参数<br/>expression<br/>是任何有效的 Microsoft SQL Server&quot; 表达式。。<br/>data_type<br/>目标系统所提供的数据类型，包括 bigint 和 sql_variant。不能使用用户定义的数据类型。<br/>length<br/>nchar、nvarchar、char、varchar、binary 或 varbinary 数据类型的可选参数。<br/>style<br/>日期格式样式，借以将 datetime 或 smalldatetime 数据转换为字符数据（nchar、nvarchar、char、varchar、nchar 或 nvarchar 数据类型）；或者字符串格式样式，借以将 float、real、money 或 smallmoney 数据转换为字符数据（nchar、nvarchar、char、varchar、nchar 或 nvarchar 数据类型）。<br/>SQL Server 支持使用科威特<a class="replace_word" title="算法与数据结构知识库" href="http://lib.csdn.net/base/datastructure" target="_blank" style="margin: 0px; padding: 0px; color: rgb(73, 73, 73); line-height: normal;">算法</a>的阿拉伯样式中的数据格式。<br/>在表中，左侧的两列表示将 datetime 或 smalldatetime 转换为字符数据的 style 值。给 style 值加 100，可获得包括世纪数位的四位年份 (yyyy)。<br/>不带世纪数位 (yy) 带世纪数位 (yyyy)<br/>标准<br/>输入/输出**<br/>- 0 或 100 (*)&nbsp; 默认值 mon dd yyyy hh:miAM（或 PM）<br/>1 101 美国 mm/dd/yyyy<br/>2 102 ANSI yy.mm.dd<br/>3 103 英国/法国 dd/mm/yy<br/>4 104 德国 dd.mm.yy<br/>5 105 意大利 dd-mm-yy<br/>6 106 - dd mon yy<br/>7 107 - mon dd, yy<br/>8 108 - hh:mm:ss<br/>- 9 或 109 (*)&nbsp; 默认值 + 毫秒 mon dd yyyy hh:mi:ss:mmmAM（或 PM）<br/>10 110 美国 mm-dd-yy<br/>11 111 日本 yy/mm/dd<br/>12 112 ISO yymmdd<br/>- 13 或 113 (*)&nbsp; 欧洲默认值 + 毫秒 dd mon yyyy hh:mm:ss:mmm(24h)<br/>14 114 - hh:mi:ss:mmm(24h)<br/>- 20 或 120 (*)&nbsp; ODBC 规范 yyyy-mm-dd hh:mm:ss[.fff]<br/>- 21 或 121 (*)&nbsp; ODBC 规范（带毫秒） yyyy-mm-dd hh:mm:ss[.fff]<br/>- 126(***) ISO8601 yyyy-mm-dd Thh:mm:ss.mmm（不含空格）<br/>- 130* Hijri**** dd mon yyyy hh:mi:ss:mmmAM<br/>- 131* Hijri**** dd/mm/yy hh:mi:ss:mmmAM
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    *&nbsp;&nbsp;&nbsp; 默认值（style 0 或 100、9 或 109、13 或 113、20 或 120、21 或 121）始终返回世纪数位 (yyyy)。<br/>** 当转换为 datetime时输入；当转换为字符数据时输出。<br/>*** 专门用于 XML。对于从 datetime或 smalldatetime 到 character 数据的转换，输出格式如表中所示。对于从 float、money 或 smallmoney 到 character 数据的转换，输出等同于 style 2。对于从 real 到 character 数据的转换，输出等同于 style 1。<br/>****Hijri 是具有几种变化形式的日历系统，Microsoft SQL Server&quot; 2000 使用其中的科威特算法。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    &nbsp;<br/>重要&nbsp; 默认情况下，SQL Server 根据截止年份 2049 解释两位数字的年份。即，两位数字的年份 49 被解释为 2049，而两位数字的年份 50 被解释为 1950。许多客户端应用程序（例如那些基于 OLE 自动化对象的客户端应用程序）都使用 2030 作为截止年份。SQL Server 提供一个配置选项（&quot;两位数字的截止年份&quot;），借以更改 SQL Server 所使用的截止年份并对日期进行一致性处理。然而最安全的办法是指定四位数字年份。
+</p>
+<p style="margin: 10px auto; padding: 0px; color: rgb(73, 73, 73); font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: normal;">
+    当从 smalldatetime 转换为字符数据时，包含秒或毫秒的样式将在这些位置上显示零。当从 datetime 或 smalldatetime 值进行转换时，可以通过使用适当的 char 或 varchar 数据类型长度来截断不需要的日期部分。
+</p>
+<p>
+    <br/>
+</p>
+        </ul>
+      </div>
+      <div class="fenx">分享：</div>
+      <div class="nextinfo">
+        <p>上一篇：<a href="#" id="aprev">没有了...</a></p>
+        <p>下一篇：<a href="#" id="anext">没有了...</a></p>
+      </div>
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+          <li><a href="/" id="a0" title="云南之行——丽江古镇玉龙雪山">云南之行——丽江古镇玉龙雪山</a></li>
+          <li><a href="/" id="a1" title="云南之行——大理洱海一日游">云南之行——大理洱海一日游</a></li>
+          <li><a href="/" id="a2" target="_blank">住在手机里的朋友</a></li>
+          <li><a href="/" id="a3" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li>
+          <li><a href="/" id="a4" target="_blank">教你怎样用欠费手机拨打电话</a></li>
+          <li><a href="/" id="a5" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li>
+        </ul>
+      </div>
+      <div class="news_pl">
+        <h2>文章评论</h2>
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="r_box f_r">
+
+      <div id="myFocus"><!--焦点图盒子-->
+        <div class="loading"></div>
+        <!--载入画面(可删除)-->
+        <div class="pic"><!--图片列表-->
+          <ul  id="lunbo">
+            <!--焦点图-->
+          </ul>
+        </div>
+      </div>
+  
+    <!--banner代码 结束 -->
+      <div class="ms-top">
+        <ul class="hd" id="tab">
+          <li class="cur"><a href="/">点击排行</a></li>
+          <li><a href="/">最新文章</a></li>
+          <li><a href="/">站长推荐</a></li>
+        </ul>
+      </div>
+      <div class="ms-main" id="ms-main">
+        <div style="display: block;" class="bd bd-news" >
+          <ul id="dianji">
+           <!-- 点击-->
+          </ul>
+        </div>
+        <div  class="bd bd-news">
+          <ul id="zuixin">
+            <!--最新-->
+          </ul>
+        </div>
+        <div class="bd bd-news">
+          <ul id="tuijian">
+            <!--推荐-->
+          </ul>
+        </div>
+      </div>
+      <!--ms-main end --> 
+
+    <!--切换卡 moreSelect end -->
+    
+    <div class="cloud">
+      <h3>标签云</h3>
+      <ul id="biaoqian">
+        <!--标签-->
+      </ul>
+    </div>
+    <div class="ad" id="r_ad"><!-- guanggao--> </div>
+
+  </div>
+  <!--r_box end --> 
+</article>
+<footer id="footer">
+  <!--footer-->
+</footer>
+<script type="text/javascript" src="js/t_a.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script src="js/silder.js"></script> 
+<script type="text/javascript">
+    var total = data.length;
+    var arrindex = config.index;
+    var arrdianji = config.dianji;
+    var arrtuijian = config.tuijian;
+    var arrzuixin = config.zuixin;
+    var arrbiaoqian = config.biaoqian;
+    var arrguanggao = config.guanggao;
+    var arrtuwentuijian = config.tuwentuijian;
+    var arryouqinglianjie = config.youqinglianjie;
+    var arrlunbo = config.lunbo;
+    var arrlunbo2 = config.lunbo2;
+    //var div = document.getElementById("div");
+    var tuijian = document.getElementById("tuijian");
+    var zuixin = document.getElementById("zuixin");
+    var dianji = document.getElementById("dianji");
+    var biaoqian = document.getElementById("biaoqian");
+    var lunbo = document.getElementById("lunbo");
+    var guanggao = document.getElementById("r_ad");
+    
+    //var youqinglianjie = document.getElementById("youqinglianjie");
+    
+    for (var i in arrlunbo) {
+        var li = document.createElement("li");
+        var lia = document.createElement("a");
+        var liaimg = document.createElement("img");
+        liaimg.src = arrlunbo[i].img;
+        liaimg.setAttribute("alt", arrlunbo[i].alt);
+        liaimg.setAttribute("text", arrlunbo[i].text);
+        liaimg.setAttribute("thumb", "");
+        lia.href = "#" + i;
+        lia.appendChild(liaimg);
+        li.appendChild(lia);
+        lunbo.appendChild(li);
+    }
+
+    //<li><a href="/" target="_blank">住在手机里的朋友</a></li>
+    for (var i in arrtuijian) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        tuijian.appendChild(li);
+    }
+    for (var i in arrzuixin) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        zuixin.appendChild(li);
+    }
+    for (var i in arrdianji) {
+        if (arrindex[i] > data.length) continue;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = data[arrindex[i]].url; a.innerText = data[arrindex[i]].title;
+        li.appendChild(a);
+        dianji.appendChild(li);
+    }
+    for (var i in arrbiaoqian) {
+        console.log(arrbiaoqian[i]);
+        var a = document.createElement("a"); a.href = "/"; a.innerText = arrbiaoqian[i];
+        biaoqian.appendChild(a);
+    }
+    if (arrguanggao.length > 1) {
+        var guanggaoimg = document.createElement("img");
+        guanggaoimg.src = arrguanggao[1].img;
+        guanggao.appendChild(guanggaoimg);
+    }
+//    for (var i in arryouqinglianjie) {
+//        var li = document.createElement("li");
+//        var lia = document.createElement("a"); lia.href = arryouqinglianjie[i].url; lia.innerText = arryouqinglianjie[i].name;
+//        li.appendChild(lia);
+//        youqinglianjie.appendChild(li);
+//    }
+</script>
+<script type="text/javascript">
+    var _title = $("#title").text();
+    var aprev = document.getElementById("aprev");
+    var anext = document.getElementById("anext");
+    var arr = [];
+    for (var i in data) {
+        if (data[i].title == _title) {
+            if (i > 0) {
+                aprev.innerText = data[parseInt(i) - 1].title;
+                aprev.href = data[parseInt(i) - 1].url;
+            }
+            if (i < total) {
+                anext.innerText = data[parseInt(i) + 1].title;
+                anext.href = data[parseInt(i) - 1].url;
+            }
+        } 
+    }
+    
+        for (var i = 0; i < 6; i++) {
+            var number = Math.floor(Math.random() * (total - 0 + 1) + 0);
+            if (arr.indexOf(number) < 0) {
+                arr.push(number);
+                $("#a" + i).text(data[number].title).attr("href", data[number].url).attr("title", data[number].title);
+            } else {
+                i--;
+            }
+        }
+</script>
+<script type="text/javascript">
+    //设置
+    myFocus.set({
+        id: 'myFocus', //ID
+        pattern: 'mF_kdui'//风格
+    });
+</script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+        jQuery(function () {
+            var elm = jQuery('#r_ad');
+            var startPos = jQuery(elm).offset().top;
+            jQuery.event.add(window, "scroll", function () {
+                var p = jQuery(window).scrollTop();
+                jQuery(elm).css('position', ((p) > startPos) ? 'fixed' : 'static');
+                jQuery(elm).css('top', ((p) > startPos) ? '30px' : '');
+            });
+        }); 
+</script> 
+</body>
+</html>
